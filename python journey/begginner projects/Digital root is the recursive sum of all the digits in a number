@@ -1,0 +1,14 @@
+def get_digit_sum(number):
+    return sum(int(digit) for digit in str(number))
+
+number = 555555
+digit_sum = get_digit_sum(number)
+
+while digit_sum > 20:
+    print(f"Sum of digits: {digit_sum} > 20")
+    print("Repeating the process...")
+    number = digit_sum  # Set the new number as the sum of digits
+    digit_sum = get_digit_sum(number)
+
+print(f"Final sum of digits: {digit_sum}")
+print(f"The number {number} has a digit sum less than 20.")
